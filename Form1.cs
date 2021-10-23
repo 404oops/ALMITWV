@@ -18,23 +18,21 @@ namespace ALMITWV
             InitializeComponent();
             
             Label.Text = "Hang on while we gather data about your system. If you see this text with your naked eye, it means that something is wrong";
-            
-            string CurrentVersion = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion";
             string CurrentVersionAlt = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";
-            
-            string ReleaseId = (string)Registry.GetValue(CurrentVersion, "ReleaseId", null);
-            string ProductName = (string)Registry.GetValue(CurrentVersion, "ProductName", null);
-            string DisplayVersion = (string)Registry.GetValue(CurrentVersion, "DisplayVersion", null);
-            string EditionId = (string)Registry.GetValue(CurrentVersion, "EditionId", null);
-            
-            var key = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64); // start copypaste (pur
-            key = key.OpenSubKey(CurrentVersionAlt, false);
+
+            var key = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(CurrentVersionAlt, false);
             DateTime startDate = new DateTime(1970, 1, 1, 0, 0, 0);
             object objValue = key.GetValue("InstallDate");
             string stringValue = objValue.ToString();
             Int64 regVal = Convert.ToInt64(stringValue);
             DateTime instd = startDate.AddSeconds(regVal); //end copypaste
             string InstallDate = instd.ToString();
+
+            string ReleaseId = (string)key.GetValue("ReleaseId");
+            string ProductName = (string)key.GetValue("ProductName");
+            string DisplayVersion = (string)key.GetValue("DisplayVersion");
+            string EditionId = (string)key.GetValue("EditionId");
+            string CurrentVersion = (string)key.GetValue("CurrentVersion");
 
             // now to text substitution
             Label.Text = null;
@@ -43,6 +41,7 @@ namespace ALMITWV
             label3.Text = "Version String: " + DisplayVersion + " (" + ReleaseId + ")";
             label4.Text = "Install Date: " + InstallDate;
             label5.Text = "Machine Name: " + Environment.MachineName;
+            label6.Text = "Kernel Version: " + CurrentVersion;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -68,6 +67,21 @@ namespace ALMITWV
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/404oops/ALMITWV");
         }
     }
 }
