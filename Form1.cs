@@ -3,19 +3,26 @@ using System.Management;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using ByteSizeLib;
+using System.Linq;
+using System.Diagnostics;
+
 namespace ALMITWV
 {
     public partial class Form1 : Form
     {
+
         public string mbrd { get; }
         public string GfxCard { get; }
         public string Processor { get; }
         public string Ram { get; }
         public int rak { get; }
+        public string RegisteredOwner;
+        public string RegisteredOrganization;
         public Form1()
+        
         {
             InitializeComponent();
-            
+
             Label.Text = "Hang on while we gather data about your system. If you see this text with your naked eye, it means that something is wrong";
             string CurrentVersionAlt = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";
 
@@ -32,6 +39,12 @@ namespace ALMITWV
             string DisplayVersion = (string)key.GetValue("DisplayVersion");
             string EditionId = (string)key.GetValue("EditionId");
             string CurrentVersion = (string)key.GetValue("CurrentVersion");
+            string RegisteredOwner = (string)key.GetValue("RegisteredOwner");
+            if ((string)key.GetValue("RegisteredOrganization") != null)
+            {
+                RegisteredOrganization = (string)key.GetValue("RegisteredOrganization");
+            }
+            
 
             ManagementObjectSearcher myVideoObject = new ManagementObjectSearcher("select * from Win32_VideoController");
             foreach (ManagementObject obj in myVideoObject.Get())
@@ -68,8 +81,30 @@ namespace ALMITWV
             label9.Text = "Graphics Card: " + GfxCard;
             label8.Text = "User: " + Environment.UserName;
             label11.Text = "Motherboard: " + mbrd;
-            label13.Text = "RAM: " + rak + "MB";
-
+            label15.Text = "RAM: " + rak + "MB";
+            label14.Text = "Registered Owner: " + RegisteredOwner;
+            if (RegisteredOrganization != "")
+            {
+                label7.Text = "Registered Organization: " + RegisteredOrganization;
+            } else
+            {
+                label7.Text = null;
+            }
+            // printing for cli (i don't see the use for this but eh, idc, here it is:
+            Console.WriteLine(label1.Text);
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", label1.Text.Length)));
+            Console.WriteLine(label2.Text);
+            Console.WriteLine(label3.Text);
+            Console.WriteLine(label4.Text);
+            Console.WriteLine(label5.Text);
+            Console.WriteLine(label6.Text);
+            Console.WriteLine(label12.Text);
+            Console.WriteLine(label9.Text);
+            Console.WriteLine(label8.Text);
+            Console.WriteLine(label11.Text);
+            Console.WriteLine(label15.Text);
+            Console.WriteLine(label14.Text);
+            Console.WriteLine(label7.Text);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -168,6 +203,11 @@ namespace ALMITWV
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
         {
 
         }
