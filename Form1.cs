@@ -11,6 +11,7 @@ namespace ALMITWV
         public string GfxCard { get; }
         public string Processor { get; }
         public string Ram { get; }
+        public int rak { get; }
         public Form1()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace ALMITWV
             foreach (ManagementObject result in results)
             {
                 Ram = result["TotalVisibleMemorySize"].ToString();
+                rak = (int.Parse(Ram) / 1024);
             }
             // now to text substitution
             Label.Text = null;
@@ -66,7 +68,7 @@ namespace ALMITWV
             label9.Text = "Graphics Card: " + GfxCard;
             label8.Text = "User: " + Environment.UserName;
             label11.Text = "Motherboard: " + mbrd;
-            label13.Text = "RAM: " + Ram + " (This is in kilobytes)";
+            label13.Text = "RAM: " + rak + "MB";
 
         }
 
