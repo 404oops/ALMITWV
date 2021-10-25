@@ -45,13 +45,15 @@ namespace ALMITWV
             this.label15 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label
             // 
             this.Label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label.AutoSize = true;
-            this.Label.Location = new System.Drawing.Point(10, 7);
+            this.Label.Location = new System.Drawing.Point(12, 8);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(249, 13);
             this.Label.TabIndex = 0;
@@ -66,8 +68,9 @@ namespace ALMITWV
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 54);
+            this.label1.Size = new System.Drawing.Size(115, 54);
             this.label1.TabIndex = 1;
+            this.label1.Text = "qrac";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label3
@@ -76,8 +79,9 @@ namespace ALMITWV
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(21, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 31);
+            this.label3.Size = new System.Drawing.Size(67, 31);
             this.label3.TabIndex = 3;
+            this.label3.Text = "qrac";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -86,8 +90,9 @@ namespace ALMITWV
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.Location = new System.Drawing.Point(21, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 31);
+            this.label4.Size = new System.Drawing.Size(67, 31);
             this.label4.TabIndex = 4;
+            this.label4.Text = "qrac";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
@@ -96,8 +101,9 @@ namespace ALMITWV
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(21, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 31);
+            this.label2.Size = new System.Drawing.Size(67, 31);
             this.label2.TabIndex = 6;
+            this.label2.Text = "qrac";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
@@ -106,8 +112,9 @@ namespace ALMITWV
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.Location = new System.Drawing.Point(21, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 31);
+            this.label5.Size = new System.Drawing.Size(67, 31);
             this.label5.TabIndex = 9;
+            this.label5.Text = "qrac";
             this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // label6
@@ -116,15 +123,16 @@ namespace ALMITWV
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.Location = new System.Drawing.Point(21, 214);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 31);
+            this.label6.Size = new System.Drawing.Size(67, 31);
             this.label6.TabIndex = 8;
+            this.label6.Text = "qrac";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Aqua;
-            this.linkLabel1.Location = new System.Drawing.Point(576, 547);
+            this.linkLabel1.Location = new System.Drawing.Point(571, 517);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(113, 13);
             this.linkLabel1.TabIndex = 11;
@@ -138,8 +146,9 @@ namespace ALMITWV
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.Location = new System.Drawing.Point(21, 307);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 31);
+            this.label8.Size = new System.Drawing.Size(67, 31);
             this.label8.TabIndex = 17;
+            this.label8.Text = "qrac";
             this.label8.Click += new System.EventHandler(this.label8_Click_1);
             // 
             // label12
@@ -148,8 +157,9 @@ namespace ALMITWV
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label12.Location = new System.Drawing.Point(21, 245);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 31);
+            this.label12.Size = new System.Drawing.Size(67, 31);
             this.label12.TabIndex = 13;
+            this.label12.Text = "qrac";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
@@ -158,8 +168,9 @@ namespace ALMITWV
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label11.Location = new System.Drawing.Point(21, 338);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 31);
+            this.label11.Size = new System.Drawing.Size(67, 31);
             this.label11.TabIndex = 20;
+            this.label11.Text = "qrac";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label14
@@ -168,8 +179,9 @@ namespace ALMITWV
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label14.Location = new System.Drawing.Point(21, 400);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 31);
+            this.label14.Size = new System.Drawing.Size(67, 31);
             this.label14.TabIndex = 18;
+            this.label14.Text = "qrac";
             this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
@@ -178,8 +190,9 @@ namespace ALMITWV
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label15.Location = new System.Drawing.Point(21, 369);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 31);
+            this.label15.Size = new System.Drawing.Size(67, 31);
             this.label15.TabIndex = 21;
+            this.label15.Text = "qrac";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label9
@@ -188,8 +201,9 @@ namespace ALMITWV
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.Location = new System.Drawing.Point(21, 276);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 31);
+            this.label9.Size = new System.Drawing.Size(67, 31);
             this.label9.TabIndex = 16;
+            this.label9.Text = "qrac";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label7
@@ -198,16 +212,41 @@ namespace ALMITWV
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.Location = new System.Drawing.Point(21, 431);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 31);
+            this.label7.Size = new System.Drawing.Size(67, 31);
             this.label7.TabIndex = 22;
+            this.label7.Text = "qrac";
             this.label7.Click += new System.EventHandler(this.label7_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(574, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Copy to Clipboard";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_ClickAsync);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(21, 464);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 31);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "qrac";
+            this.label10.Click += new System.EventHandler(this.label10_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(701, 569);
+            this.ClientSize = new System.Drawing.Size(691, 539);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
@@ -227,9 +266,9 @@ namespace ALMITWV
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(721, 612);
+            this.MaximumSize = new System.Drawing.Size(711, 582);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(721, 612);
+            this.MinimumSize = new System.Drawing.Size(711, 452);
             this.Name = "Form1";
             this.Text = "A Little More Info Than Winver";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -255,6 +294,8 @@ namespace ALMITWV
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
     }
 }
 

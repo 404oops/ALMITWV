@@ -2,15 +2,13 @@
 using System.Management;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using ByteSizeLib;
 using System.Linq;
-using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace ALMITWV
 {
     public partial class Form1 : Form
     {
-
         public string mbrd { get; }
         public string GfxCard { get; }
         public string Processor { get; }
@@ -18,11 +16,12 @@ namespace ALMITWV
         public int rak { get; }
         public string RegisteredOwner;
         public string RegisteredOrganization;
+        public string clipboard;
         public Form1()
         
         {
             InitializeComponent();
-
+            button1.Text = "Copy to Clipboard";
             Label.Text = "Hang on while we gather data about your system. If you see this text with your naked eye, it means that something is wrong";
             string CurrentVersionAlt = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";
 
@@ -69,6 +68,8 @@ namespace ALMITWV
                 Ram = result["TotalVisibleMemorySize"].ToString();
                 rak = (int.Parse(Ram) / 1024);
             }
+            string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
+            string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
             // now to text substitution
             Label.Text = null;
             label1.Text = ProductName.Replace(EditionId, null);
@@ -83,6 +84,7 @@ namespace ALMITWV
             label11.Text = "Motherboard: " + mbrd;
             label15.Text = "RAM: " + rak + "MB";
             label14.Text = "Registered Owner: " + RegisteredOwner;
+            label10.Text = "Resolution: " + screenWidth + "x" + screenHeight;
             if (RegisteredOrganization != "")
             {
                 label7.Text = "Registered Organization: " + RegisteredOrganization;
@@ -90,21 +92,25 @@ namespace ALMITWV
             {
                 label7.Text = null;
             }
-            // printing for cli (i don't see the use for this but eh, idc, here it is:
-            Console.WriteLine(label1.Text);
-            Console.WriteLine(string.Concat(Enumerable.Repeat("-", label1.Text.Length)));
-            Console.WriteLine(label2.Text);
-            Console.WriteLine(label3.Text);
-            Console.WriteLine(label4.Text);
-            Console.WriteLine(label5.Text);
-            Console.WriteLine(label6.Text);
-            Console.WriteLine(label12.Text);
-            Console.WriteLine(label9.Text);
-            Console.WriteLine(label8.Text);
-            Console.WriteLine(label11.Text);
-            Console.WriteLine(label15.Text);
-            Console.WriteLine(label14.Text);
-            Console.WriteLine(label7.Text);
+            // // printing for cli (i don't see the use for this but eh, idc, here it is:
+            // Console.WriteLine(label1.Text);
+            // Console.WriteLine(string.Concat(Enumerable.Repeat("-", label1.Text.Length)));
+            // Console.WriteLine(label2.Text);
+            // Console.WriteLine(label3.Text);
+            // Console.WriteLine(label4.Text);
+            // Console.WriteLine(label5.Text);
+            // Console.WriteLine(label6.Text);
+            // Console.WriteLine(label12.Text);
+            // Console.WriteLine(label9.Text);
+            // Console.WriteLine(label8.Text);
+            // Console.WriteLine(label11.Text);
+            // Console.WriteLine(label15.Text);
+            // Console.WriteLine(label14.Text);
+            // Console.WriteLine(label7.Text);
+
+            clipboard = label1.Text + Environment.NewLine + string.Concat(Enumerable.Repeat("-", label1.Text.Length)) + Environment.NewLine + label2.Text + Environment.NewLine + label3.Text + Environment.NewLine + label4.Text + Environment.NewLine + label5.Text + Environment.NewLine + label6.Text + Environment.NewLine + label12.Text + Environment.NewLine + label9.Text + Environment.NewLine + label8.Text + Environment.NewLine + label11.Text + Environment.NewLine + label15.Text + Environment.NewLine + label14.Text + Environment.NewLine + label7.Text + Environment.NewLine + label10.Text;
+            Console.WriteLine(clipboard);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -208,6 +214,26 @@ namespace ALMITWV
         }
 
         private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void Button1_ClickAsync(object sender, EventArgs e)
+        {
+            Clipboard.SetText(clipboard);
+            button1.Text = "Copied!";
+            await Task.Delay(millisecondsDelay: 1000);
+            button1.Text = "Copy to Clipboard";
+        }
+        public static Task Delay(int milliseconds)
+        {
+            var tcs = new TaskCompletionSource<bool>();
+            var timer = new System.Threading.Timer(o => tcs.SetResult(false));
+            timer.Change(milliseconds, -1);
+            return tcs.Task;
+        }
+
+        private void label10_Click_1(object sender, EventArgs e)
         {
 
         }
