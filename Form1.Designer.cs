@@ -31,22 +31,22 @@ namespace ALMITWV
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.productname = new System.Windows.Forms.Label();
+            this.versionstring = new System.Windows.Forms.Label();
+            this.instaldate = new System.Windows.Forms.Label();
+            this.editionid = new System.Windows.Forms.Label();
+            this.machinename = new System.Windows.Forms.Label();
+            this.kernelversion = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.user = new System.Windows.Forms.Label();
+            this.cpu = new System.Windows.Forms.Label();
+            this.motherboard = new System.Windows.Forms.Label();
+            this.regowner = new System.Windows.Forms.Label();
+            this.ram = new System.Windows.Forms.Label();
+            this.gpu = new System.Windows.Forms.Label();
+            this.reg_org_or_res = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.null_or_res = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label
@@ -59,74 +59,72 @@ namespace ALMITWV
             this.Label.TabIndex = 0;
             this.Label.Text = "You found me! Read the source code for more info!";
             this.Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Label.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label1
+            // productname
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "qrac";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.productname.AutoSize = true;
+            this.productname.BackColor = System.Drawing.Color.Transparent;
+            this.productname.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productname.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.productname.Location = new System.Drawing.Point(7, 9);
+            this.productname.Name = "productname";
+            this.productname.Size = new System.Drawing.Size(0, 62);
+            this.productname.TabIndex = 1;
             // 
-            // label3
+            // versionstring
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(21, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 31);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "qrac";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.versionstring.AutoSize = true;
+            this.versionstring.BackColor = System.Drawing.Color.Transparent;
+            this.versionstring.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.versionstring.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.versionstring.Location = new System.Drawing.Point(12, 113);
+            this.versionstring.Name = "versionstring";
+            this.versionstring.Size = new System.Drawing.Size(0, 32);
+            this.versionstring.TabIndex = 3;
             // 
-            // label4
+            // instaldate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(21, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 31);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "qrac";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.instaldate.AutoSize = true;
+            this.instaldate.BackColor = System.Drawing.Color.Transparent;
+            this.instaldate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.instaldate.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.instaldate.Location = new System.Drawing.Point(12, 145);
+            this.instaldate.Name = "instaldate";
+            this.instaldate.Size = new System.Drawing.Size(0, 32);
+            this.instaldate.TabIndex = 4;
             // 
-            // label2
+            // editionid
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(21, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 31);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "qrac";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.editionid.AutoSize = true;
+            this.editionid.BackColor = System.Drawing.Color.Transparent;
+            this.editionid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editionid.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.editionid.Location = new System.Drawing.Point(12, 81);
+            this.editionid.Name = "editionid";
+            this.editionid.Size = new System.Drawing.Size(0, 32);
+            this.editionid.TabIndex = 6;
             // 
-            // label5
+            // machinename
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(21, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 31);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "qrac";
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            this.machinename.AutoSize = true;
+            this.machinename.BackColor = System.Drawing.Color.Transparent;
+            this.machinename.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.machinename.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.machinename.Location = new System.Drawing.Point(12, 177);
+            this.machinename.Name = "machinename";
+            this.machinename.Size = new System.Drawing.Size(0, 32);
+            this.machinename.TabIndex = 9;
             // 
-            // label6
+            // kernelversion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(21, 214);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 31);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "qrac";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.kernelversion.AutoSize = true;
+            this.kernelversion.BackColor = System.Drawing.Color.Transparent;
+            this.kernelversion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kernelversion.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kernelversion.Location = new System.Drawing.Point(12, 209);
+            this.kernelversion.Name = "kernelversion";
+            this.kernelversion.Size = new System.Drawing.Size(0, 32);
+            this.kernelversion.TabIndex = 8;
             // 
             // linkLabel1
             // 
@@ -140,82 +138,82 @@ namespace ALMITWV
             this.linkLabel1.Text = "Source available here!";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label8
+            // user
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(21, 307);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 31);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "qrac";
-            this.label8.Click += new System.EventHandler(this.label8_Click_1);
+            this.user.AutoSize = true;
+            this.user.BackColor = System.Drawing.Color.Transparent;
+            this.user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.user.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.user.Location = new System.Drawing.Point(12, 305);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(0, 32);
+            this.user.TabIndex = 17;
             // 
-            // label12
+            // cpu
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(21, 245);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 31);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "qrac";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.cpu.AutoSize = true;
+            this.cpu.BackColor = System.Drawing.Color.Transparent;
+            this.cpu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cpu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cpu.Location = new System.Drawing.Point(12, 241);
+            this.cpu.Name = "cpu";
+            this.cpu.Size = new System.Drawing.Size(0, 32);
+            this.cpu.TabIndex = 13;
             // 
-            // label11
+            // motherboard
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(21, 338);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 31);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "qrac";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.motherboard.AutoSize = true;
+            this.motherboard.BackColor = System.Drawing.Color.Transparent;
+            this.motherboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.motherboard.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.motherboard.Location = new System.Drawing.Point(12, 337);
+            this.motherboard.Name = "motherboard";
+            this.motherboard.Size = new System.Drawing.Size(0, 32);
+            this.motherboard.TabIndex = 20;
             // 
-            // label14
+            // regowner
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.Location = new System.Drawing.Point(21, 400);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 31);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "qrac";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.regowner.AutoSize = true;
+            this.regowner.BackColor = System.Drawing.Color.Transparent;
+            this.regowner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regowner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.regowner.Location = new System.Drawing.Point(12, 401);
+            this.regowner.Name = "regowner";
+            this.regowner.Size = new System.Drawing.Size(0, 32);
+            this.regowner.TabIndex = 18;
             // 
-            // label15
+            // ram
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(21, 369);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 31);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "qrac";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            this.ram.AutoSize = true;
+            this.ram.BackColor = System.Drawing.Color.Transparent;
+            this.ram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ram.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ram.Location = new System.Drawing.Point(12, 369);
+            this.ram.Name = "ram";
+            this.ram.Size = new System.Drawing.Size(0, 32);
+            this.ram.TabIndex = 21;
             // 
-            // label9
+            // gpu
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(21, 276);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 31);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "qrac";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.gpu.AutoSize = true;
+            this.gpu.BackColor = System.Drawing.Color.Transparent;
+            this.gpu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gpu.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gpu.Location = new System.Drawing.Point(12, 273);
+            this.gpu.Name = "gpu";
+            this.gpu.Size = new System.Drawing.Size(0, 32);
+            this.gpu.TabIndex = 16;
             // 
-            // label7
+            // reg_org_or_res
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(21, 431);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 31);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "qrac";
-            this.label7.Click += new System.EventHandler(this.label7_Click_1);
+            this.reg_org_or_res.AutoSize = true;
+            this.reg_org_or_res.BackColor = System.Drawing.Color.Transparent;
+            this.reg_org_or_res.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reg_org_or_res.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.reg_org_or_res.Location = new System.Drawing.Point(12, 433);
+            this.reg_org_or_res.Name = "reg_org_or_res";
+            this.reg_org_or_res.Size = new System.Drawing.Size(0, 32);
+            this.reg_org_or_res.TabIndex = 22;
             // 
             // button1
             // 
@@ -228,39 +226,39 @@ namespace ALMITWV
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_ClickAsync);
             // 
-            // label10
+            // null_or_res
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(21, 464);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 31);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "qrac";
-            this.label10.Click += new System.EventHandler(this.label10_Click_1);
+            this.null_or_res.AutoSize = true;
+            this.null_or_res.BackColor = System.Drawing.Color.Transparent;
+            this.null_or_res.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.null_or_res.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.null_or_res.Location = new System.Drawing.Point(12, 465);
+            this.null_or_res.Name = "null_or_res";
+            this.null_or_res.Size = new System.Drawing.Size(0, 32);
+            this.null_or_res.TabIndex = 24;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(691, 539);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.null_or_res);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.reg_org_or_res);
+            this.Controls.Add(this.ram);
+            this.Controls.Add(this.motherboard);
+            this.Controls.Add(this.regowner);
+            this.Controls.Add(this.user);
+            this.Controls.Add(this.gpu);
+            this.Controls.Add(this.cpu);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.machinename);
+            this.Controls.Add(this.kernelversion);
+            this.Controls.Add(this.editionid);
+            this.Controls.Add(this.instaldate);
+            this.Controls.Add(this.versionstring);
+            this.Controls.Add(this.productname);
             this.Controls.Add(this.Label);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -280,22 +278,22 @@ namespace ALMITWV
         #endregion
 
         private System.Windows.Forms.Label Label;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label productname;
+        private System.Windows.Forms.Label versionstring;
+        private System.Windows.Forms.Label instaldate;
+        private System.Windows.Forms.Label editionid;
+        private System.Windows.Forms.Label machinename;
+        private System.Windows.Forms.Label kernelversion;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label user;
+        private System.Windows.Forms.Label cpu;
+        private System.Windows.Forms.Label motherboard;
+        private System.Windows.Forms.Label regowner;
+        private System.Windows.Forms.Label ram;
+        private System.Windows.Forms.Label gpu;
+        private System.Windows.Forms.Label reg_org_or_res;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label null_or_res;
     }
 }
 
