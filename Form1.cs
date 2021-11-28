@@ -69,7 +69,7 @@ namespace ALMITWV
             foreach (ManagementObject result in results)
             {
                 Ram = result["TotalVisibleMemorySize"].ToString();
-                rak = (int.Parse(Ram) / 1024000);
+                rak = (int.Parse(Ram) / 1048576);
             }
             string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
             string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
