@@ -14,6 +14,7 @@ namespace ALMITWV
         public string Processor { get; }
         public string Ram { get; }
         public int rak { get; }
+        public int gbrak { get; }
         public string RegisteredOwner;
         public string RegisteredOrganization;
         public string clipboard;
