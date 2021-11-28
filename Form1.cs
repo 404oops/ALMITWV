@@ -86,7 +86,7 @@ namespace ALMITWV
             gpu.Text = "Graphics Card: " + GfxCard;
             user.Text = "User: " + Environment.UserName;
             motherboard.Text = "Motherboard: " + mbrd;
-            ram.Text = "RAM (GB): " + rak + "MB" + " ("gbrak + "GB")";
+            ram.Text = "RAM (GB): " + rak + "MB" + " ("gbrak + "GB")"; 
             regowner.Text = "Registered Owner: " + RegisteredOwner;
             if (RegisteredOrganization != "")
             {
