@@ -69,7 +69,7 @@ namespace ALMITWV
             foreach (ManagementObject result in results)
             {
                 Ram = result["TotalVisibleMemorySize"].ToString();
-                rak = (int.Parse(Ram) / 1024);
+                rak = (int.Parse(Ram) / 1024000);
             }
             string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
             string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
@@ -85,7 +85,7 @@ namespace ALMITWV
             gpu.Text = "Graphics Card: " + GfxCard;
             user.Text = "User: " + Environment.UserName;
             motherboard.Text = "Motherboard: " + mbrd;
-            ram.Text = "RAM: " + rak + "MB";
+            ram.Text = "RAM: " + rak + "GB";
             regowner.Text = "Registered Owner: " + RegisteredOwner;
             if (RegisteredOrganization != "")
             {
