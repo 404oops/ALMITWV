@@ -13,8 +13,8 @@ namespace ALMITWV
         public string GfxCard { get; }
         public string Processor { get; }
         public string Ram { get; }
-        public int rak { get; }
-        public int gbrak { get; }
+        public decimal Rak { get; }
+        public decimal GBRak { get; }
         public string RegisteredOwner;
         public string RegisteredOrganization;
         public string clipboard;
@@ -70,8 +70,10 @@ namespace ALMITWV
             foreach (ManagementObject result in results)
             {
                 Ram = result["TotalVisibleMemorySize"].ToString();
-                rak = (int.Parse(Ram) / 1024);
-                gbrak = (int.Parse(Ram) / 1000000);
+                Rak = decimal.Parse(Ram) / 1024;
+                Rak = decimal.Round(Rak, 0, MidpointRounding.AwayFromZero);
+                GBRak = (decimal.Parse(Ram) / (1024 * 1024));
+                GBRak = decimal.Round(GBRak, 2, MidpointRounding.AwayFromZero);
             }
             string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
             string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
@@ -87,7 +89,7 @@ namespace ALMITWV
             gpu.Text = "Graphics Card: " + GfxCard;
             user.Text = "User: " + Environment.UserName;
             motherboard.Text = "Motherboard: " + mbrd;
-            ram.Text = "RAM (GB): " + rak + "MB" + " (" + gbrak + " GB")";
+            ram.Text = "RAM (GB): " + Rak + "MB" + " (" + GBRak + " GB)";
             regowner.Text = "Registered Owner: " + RegisteredOwner;
             if (RegisteredOrganization != "")
             {
