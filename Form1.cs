@@ -71,7 +71,7 @@ namespace ALMITWV
             {
                 Ram = result["TotalVisibleMemorySize"].ToString();
                 rak = (int.Parse(Ram) / 1024);
-                gbrak = (int.Parse(Ram) / 1048576);
+                gbrak = (int.Parse(Ram) / 1000000);
             }
             string screenWidth = Screen.PrimaryScreen.Bounds.Width.ToString();
             string screenHeight = Screen.PrimaryScreen.Bounds.Height.ToString();
