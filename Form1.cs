@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Diagnostics;
 using System.Management;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -38,7 +40,7 @@ namespace ALMITWV
             string ProductName = (string)key.GetValue("ProductName");
             string DisplayVersion = (string)key.GetValue("DisplayVersion");
             string EditionId = (string)key.GetValue("EditionId");
-            string CurrentVersion = (string)key.GetValue("CurrentVersion");
+            string CurrentVersion = FileVersionInfo.GetVersionInfo(Path.Combine(Environment.SystemDirectory, "ntoskrnl.exe")).FileVersion;
             string RegisteredOwner = (string)key.GetValue("RegisteredOwner");
             if ((string)key.GetValue("RegisteredOrganization") != null)
             {
